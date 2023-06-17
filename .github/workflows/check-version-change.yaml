@@ -31,16 +31,17 @@ jobs:
           # Get the version in the current commit
           current_version=$(node -p "require('./package.json').version")
 
-          # Checkout the previous commit
-          git checkout HEAD^
+          # Checkout the master branch
+          git fetch origin master
+          git checkout master
 
-          # Get the version in the previous commit
-          previous_version=$(node -p "require('./package.json').version")
+          # Get the version in the master branch
+          master_version=$(node -p "require('./package.json').version")
 
           # Check if the versions are different
-          if [[ "$current_version" == "$previous_version" ]]; then
-            echo "Version has not changed!"
+          if [[ "$current_version" == "$master_version" ]]; then
+            echo "Version has not changed from master!"
             exit 1
           else
-            echo "Version has changed from $previous_version to $current_version."
+            echo "Version has changed from $master_version in master to $current_version."
           fi
