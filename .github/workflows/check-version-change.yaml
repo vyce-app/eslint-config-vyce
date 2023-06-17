@@ -1,0 +1,46 @@
+name: Check version change
+
+on:
+  push:
+    branches-ignore:
+      - master
+
+jobs:
+  check-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2  # this is required to fetch the previous commit
+
+      - name: Read .nvmrc
+        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+        id: nvm
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check version change
+        run: |
+          # Get the version in the current commit
+          current_version=$(node -p "require('./package.json').version")
+
+          # Checkout the previous commit
+          git checkout HEAD^
+
+          # Get the version in the previous commit
+          previous_version=$(node -p "require('./package.json').version")
+
+          # Check if the versions are different
+          if [[ "$current_version" == "$previous_version" ]]; then
+            echo "Version has not changed!"
+            exit 1
+          else
+            echo "Version has changed from $previous_version to $current_version."
+          fi
