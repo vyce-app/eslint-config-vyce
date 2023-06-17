@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
 	parser: '@typescript-eslint/parser',
 	parserOptions: { sourceType: 'module' },
@@ -47,9 +45,9 @@ module.exports = {
 				'no-implied-eval': 'off',
 				'@typescript-eslint/no-implied-eval': 'error',
 				'@typescript-eslint/no-misused-promises': ['error', {
-					'checksVoidReturn': {
-						'attributes': false
-					}
+					checksVoidReturn: {
+						attributes: false,
+					},
 				}],
 				'@typescript-eslint/no-unnecessary-type-assertion': 'error',
 				'@typescript-eslint/no-unsafe-argument': 'error',
@@ -62,7 +60,7 @@ module.exports = {
 				'@typescript-eslint/restrict-plus-operands': 'error',
 				'@typescript-eslint/restrict-template-expressions': 'error',
 				'@typescript-eslint/unbound-method': ['error', {
-					'ignoreStatic': true
+					ignoreStatic: true,
 				}],
 
 				// Strict
@@ -115,7 +113,7 @@ module.exports = {
 				'@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
 				'comma-spacing': 'off',
 				'@typescript-eslint/comma-spacing': ['error', {
-					before: false, after: true
+					before: false, after: true,
 				}],
 				'@typescript-eslint/consistent-type-exports': 'error',
 				'@typescript-eslint/consistent-type-imports': 'error',
@@ -178,28 +176,28 @@ module.exports = {
 					'error',
 					{
 						selector: 'default',
-						format: ['camelCase']
+						format: ['camelCase'],
 					},
 					{
 						selector: 'variable',
-						format: ['camelCase', 'UPPER_CASE']
+						format: ['camelCase', 'UPPER_CASE'],
 					},
 					{
 						selector: 'parameter',
 						format: ['camelCase'],
-						leadingUnderscore: 'allow'
+						leadingUnderscore: 'allow',
 					},
 
 					{
 						selector: 'memberLike',
 						modifiers: ['private'],
 						format: ['camelCase'],
-						leadingUnderscore: 'require'
+						leadingUnderscore: 'require',
 					},
 					{
 						selector: 'typeLike',
-						format: ['PascalCase']
-					}
+						format: ['PascalCase'],
+					},
 				],
 				'@typescript-eslint/no-confusing-void-expression': 'error',
 				'no-dupe-class-members': 'off',
@@ -268,6 +266,6 @@ module.exports = {
 				'@typescript-eslint/type-annotation-spacing': 'error',
 				'@typescript-eslint/typedef': 'error',
 			},
-		}
-	]
+		},
+	],
 };

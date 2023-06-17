@@ -1,33 +1,33 @@
 module.exports = {
 	env: {
-		es6: true
+		es6: true,
 	},
 
 	parserOptions: {
 		ecmaVersion: 6,
-		sourceType: 'module'
+		sourceType: 'module',
 	},
 
 	plugins: [
-		'import'
+		'import',
 	],
 
 	settings: {
 		'import/resolver': {
 			node: {
-				extensions: ['.mjs', '.js', '.json']
-			}
+				extensions: ['.mjs', '.js', '.json'],
+			},
 		},
 		'import/extensions': [
 			'.js',
 			'.mjs',
-			'.jsx'
+			'.jsx',
 		],
 		'import/core-modules': [],
 		'import/ignore': [
 			'node_modules',
-			'\\.(coffee|scss|css|less|hbs|svg|json)$'
-		]
+			'\\.(coffee|scss|css|less|hbs|svg|json)$',
+		],
 	},
 
 	rules: {
@@ -38,7 +38,7 @@ module.exports = {
 		 * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
 		 */
 		'import/no-unresolved': ['error', {
-			commonjs: true, caseSensitive: true
+			commonjs: true, caseSensitive: true,
 		}],
 
 		/*
@@ -132,10 +132,10 @@ module.exports = {
 				// protractor config
 				'**/protractor.conf.*.js',
 				// test setup
-				'**/setupTests.ts'
+				'**/setupTests.ts',
 			],
 			optionalDependencies: false,
-			peerDependencies: false
+			peerDependencies: false,
 		}],
 
 		/*
@@ -202,7 +202,7 @@ module.exports = {
 				js: 'never',
 				jsx: 'never',
 				ts: 'never',
-				tsx: 'never'
+				tsx: 'never',
 			},
 		],
 
@@ -265,7 +265,7 @@ module.exports = {
 		 * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-internal-modules.md
 		 */
 		'import/no-internal-modules': ['off', {
-			allow: []
+			allow: [],
 		}],
 
 		/*
@@ -306,7 +306,7 @@ module.exports = {
 			allowAnonymousClass: false,
 			allowAnonymousFunction: false,
 			allowLiteral: false,
-			allowObject: false
+			allowObject: false,
 		}],
 
 		/*
@@ -359,7 +359,7 @@ module.exports = {
 		 */
 		'import/dynamic-import-chunkname': ['off', {
 			importFunctions: [],
-			webpackChunknameFormat: '[0-9a-zA-Z-_/.]+'
+			webpackChunknameFormat: '[0-9a-zA-Z-_/.]+',
 		}],
 
 		/*
@@ -375,7 +375,7 @@ module.exports = {
 		'import/no-unused-modules': ['off', {
 			ignoreExports: [],
 			missingExports: true,
-			unusedExports: true
-		}]
-	}
+			unusedExports: true,
+		}],
+	},
 };

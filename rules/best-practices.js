@@ -115,8 +115,8 @@ module.exports = {
 		'no-empty-function': [
 			'error',
 			{
-				allow: ['arrowFunctions', 'functions', 'methods']
-			}
+				allow: ['arrowFunctions', 'functions', 'methods'],
+			},
 		],
 
 		/*
@@ -190,8 +190,8 @@ module.exports = {
 				boolean: false,
 				number: true,
 				string: true,
-				allow: []
-			}
+				allow: [],
+			},
 		],
 
 		/*
@@ -223,7 +223,7 @@ module.exports = {
 		 * https://eslint.org/docs/rules/no-labels
 		 */
 		'no-labels': ['error', {
-			allowLoop: false, allowSwitch: false
+			allowLoop: false, allowSwitch: false,
 		}],
 
 		/*
@@ -248,8 +248,8 @@ module.exports = {
 				ignore: [-1, 0, 1, 2, 24, 60, 100, 1000, 1024, 3600],
 				ignoreArrayIndexes: true,
 				enforceConst: true,
-				detectObjects: false
-			}
+				detectObjects: false,
+			},
 		],
 
 		/*
@@ -259,8 +259,8 @@ module.exports = {
 		'no-multi-spaces': [
 			'error',
 			{
-				ignoreEOLComments: false
-			}
+				ignoreEOLComments: false,
+			},
 		],
 
 		/*
@@ -329,9 +329,9 @@ module.exports = {
 					// for Angular 1 scopes
 					'$scope',
 					// for ReactRouter context
-					'staticContext'
-				]
-			}
+					'staticContext',
+				],
+			},
 		],
 
 		/*
@@ -355,51 +355,51 @@ module.exports = {
 			{
 				object: 'arguments',
 				property: 'callee',
-				message: 'arguments.callee is deprecated'
+				message: 'arguments.callee is deprecated',
 			},
 			{
 				object: 'global',
 				property: 'isFinite',
-				message: 'Please use Number.isFinite instead'
+				message: 'Please use Number.isFinite instead',
 			},
 			{
 				object: 'self',
 				property: 'isFinite',
-				message: 'Please use Number.isFinite instead'
+				message: 'Please use Number.isFinite instead',
 			},
 			{
 				object: 'window',
 				property: 'isFinite',
-				message: 'Please use Number.isFinite instead'
+				message: 'Please use Number.isFinite instead',
 			},
 			{
 				object: 'global',
 				property: 'isNaN',
-				message: 'Please use Number.isNaN instead'
+				message: 'Please use Number.isNaN instead',
 			},
 			{
 				object: 'self',
 				property: 'isNaN',
-				message: 'Please use Number.isNaN instead'
+				message: 'Please use Number.isNaN instead',
 			},
 			{
 				object: 'window',
 				property: 'isNaN',
-				message: 'Please use Number.isNaN instead'
+				message: 'Please use Number.isNaN instead',
 			},
 			{
 				property: '__defineGetter__',
-				message: 'Please use Object.defineProperty instead.'
+				message: 'Please use Object.defineProperty instead.',
 			},
 			{
 				property: '__defineSetter__',
-				message: 'Please use Object.defineProperty instead.'
+				message: 'Please use Object.defineProperty instead.',
 			},
 			{
 				object: 'Math',
 				property: 'pow',
-				message: 'Use the exponentiation operator (**) instead.'
-			}
+				message: 'Use the exponentiation operator (**) instead.',
+			},
 		],
 
 		/*
@@ -427,8 +427,8 @@ module.exports = {
 		'no-self-assign': [
 			'error',
 			{
-				props: true
-			}
+				props: true,
+			},
 		],
 
 		/*
@@ -464,8 +464,8 @@ module.exports = {
 			{
 				allowShortCircuit: false,
 				allowTernary: false,
-				allowTaggedTemplates: false
-			}
+				allowTaggedTemplates: false,
+			},
 		],
 
 		/*
@@ -515,7 +515,7 @@ module.exports = {
 		 * https://eslint.org/docs/rules/no-warning-comments
 		 */
 		'no-warning-comments': ['off', {
-			terms: ['todo', 'fixme', 'xxx'], location: 'start'
+			terms: ['todo', 'fixme', 'xxx'], location: 'start',
 		}],
 
 		/*
@@ -570,6 +570,6 @@ module.exports = {
 		 * Require or disallow Yoda conditions
 		 * https://eslint.org/docs/rules/yoda
 		 */
-		yoda: 'error'
-	}
+		yoda: 'error',
+	},
 };

@@ -6,6 +6,6 @@ module.exports = {
 	rules: {
 		'@getify/proper-ternary/nested': 'error',
 		'@getify/proper-ternary/parens': 'off',
-		'@getify/proper-ternary/where': 'error'
-	}
+		'@getify/proper-ternary/where': 'error',
+	},
 };

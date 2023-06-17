@@ -13,13 +13,13 @@ describe('react', () => {
 				'--no-eslintrc',
 				'--config',
 				'./test/configs/base.js',
-				'./test/samples/react.tsx'
+				'./test/samples/react.tsx',
 			],
-			{ encoding: 'utf8' }
+			{ encoding: 'utf8' },
 		);
 
 		const output = JSON.parse(
-			result.stdout.substring(result.stdout.indexOf('['))
+			result.stdout.substring(result.stdout.indexOf('[')),
 		);
 
 		expect(output.length).toBe(1);
@@ -38,19 +38,19 @@ describe('react', () => {
 				'--no-eslintrc',
 				'--config',
 				'./test/configs/react.js',
-				'./test/samples/react.tsx'
+				'./test/samples/react.tsx',
 			],
-			{ encoding: 'utf8' }
+			{ encoding: 'utf8' },
 		);
 
 		const output = JSON.parse(
-			result.stdout.substring(result.stdout.indexOf('['))
+			result.stdout.substring(result.stdout.indexOf('[')),
 		);
 
 		expect(output.length).toBe(1);
 		expect(output[0].messages.length).toBe(1);
 		expect(output[0].messages[0].ruleId).toBe(
-			'react/no-find-dom-node'
+			'react/no-find-dom-node',
 		);
 	});
 

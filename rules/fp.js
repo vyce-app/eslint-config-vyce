@@ -20,6 +20,6 @@ module.exports = {
 		'fp/no-throw': 'off',
 		'fp/no-unused-expression': 'off',
 		'fp/no-valueof-field': 'error',
-		'no-var': 'off'
-	}
+		'no-var': 'off',
+	},
 };

@@ -3,7 +3,11 @@ module.exports = {
 
 	env: {
 		node: true,
-		vitest: true,
+		jest: true,
+	},
+
+	parserOptions: {
+		sourceType: 'module',
 	},
 
 	extends: './node',
@@ -17,4 +21,15 @@ module.exports = {
 		'sonarjs/no-duplicate-string': 'off',
 		'filenames/match-exported': ['error', 'kebab'],
 	},
+
+	overrides: [
+		{
+			files: ['*.spec.js', '*.config.js'],
+			rules: {
+				'import/no-extraneous-dependencies': 'off',
+				'n/no-extraneous-require': 'off',
+				'n/global-require': 'off',
+			},
+		},
+	],
 };

@@ -79,7 +79,7 @@ module.exports = {
 			returnAssign: false,
 			// delegate to eslint-plugin-react
 			ignoreJSX: 'all',
-			enforceForArrowConditionals: false
+			enforceForArrowConditionals: false,
 		}],
 
 		// disallow unnecessary semicolons
@@ -169,6 +169,6 @@ module.exports = {
 		 * ensure that the results of typeof are compared against a valid string
 		 * https://eslint.org/docs/rules/valid-typeof
 		 */
-		'valid-typeof': ['error', { requireStringLiterals: true }]
-	}
+		'valid-typeof': ['error', { requireStringLiterals: true }],
+	},
 };

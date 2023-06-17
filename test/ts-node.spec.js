@@ -13,13 +13,13 @@ describe('ts-node', () => {
 				'--no-eslintrc',
 				'--config',
 				'./test/configs/base.js',
-				'./test/samples/ts-node.ts'
+				'./test/samples/ts-node.ts',
 			],
-			{ encoding: 'utf8' }
+			{ encoding: 'utf8' },
 		);
 
 		const output = JSON.parse(
-			result.stdout.substring(result.stdout.indexOf('['))
+			result.stdout.substring(result.stdout.indexOf('[')),
 		);
 
 		expect(output.length).toBe(1);
@@ -38,25 +38,25 @@ describe('ts-node', () => {
 				'--no-eslintrc',
 				'--config',
 				'./test/configs/ts-node.js',
-				'./test/samples/ts-node.ts'
+				'./test/samples/ts-node.ts',
 			],
-			{ encoding: 'utf8' }
+			{ encoding: 'utf8' },
 		);
 
 		const output = JSON.parse(
-			result.stdout.substring(result.stdout.indexOf('['))
+			result.stdout.substring(result.stdout.indexOf('[')),
 		);
 
 		expect(output.length).toBe(1);
 		expect(output[0].messages.length).toBe(3);
 		expect(output[0].messages[0].ruleId).toBe(
-			'@typescript-eslint/no-unused-vars'
+			'@typescript-eslint/no-unused-vars',
 		);
 		expect(output[0].messages[1].ruleId).toBe(
-			'@typescript-eslint/type-annotation-spacing'
+			'@typescript-eslint/type-annotation-spacing',
 		);
 		expect(output[0].messages[2].ruleId).toBe(
-			'@typescript-eslint/comma-dangle'
+			'@typescript-eslint/comma-dangle',
 		);
 	});
 

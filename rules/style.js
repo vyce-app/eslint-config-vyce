@@ -12,7 +12,7 @@ module.exports = {
 		 * https://eslint.org/docs/rules/array-element-newline
 		 */
 		'array-element-newline': ['off', {
-			multiline: true, minItems: 3
+			multiline: true, minItems: 3,
 		}],
 
 		/*
@@ -38,7 +38,7 @@ module.exports = {
 		 * https://eslint.org/docs/rules/camelcase
 		 */
 		camelcase: ['error', {
-			properties: 'never', ignoreDestructuring: true
+			properties: 'never', ignoreDestructuring: true,
 		}],
 
 		/*
@@ -52,14 +52,14 @@ module.exports = {
 				line: {
 					ignorePattern: '.*',
 					ignoreInlineComments: true,
-					ignoreConsecutiveComments: true
+					ignoreConsecutiveComments: true,
 				},
 				block: {
 					ignorePattern: '.*',
 					ignoreInlineComments: true,
-					ignoreConsecutiveComments: true
-				}
-			}
+					ignoreConsecutiveComments: true,
+				},
+			},
 		],
 
 		/*
@@ -73,7 +73,7 @@ module.exports = {
 		 * https://eslint.org/docs/rules/comma-spacing
 		 */
 		'comma-spacing': ['error', {
-			before: false, after: true
+			before: false, after: true,
 		}],
 
 		/*
@@ -95,9 +95,9 @@ module.exports = {
 					ObjectExpression: false,
 					ObjectPattern: false,
 					VariableDeclaration: false,
-					NewExpression: false
-				}
-			}
+					NewExpression: false,
+				},
+			},
 		],
 
 		/*
@@ -134,8 +134,8 @@ module.exports = {
 			'always',
 			{
 				includeCommonJSModuleExports: false,
-				considerPropertyDescriptor: true
-			}
+				considerPropertyDescriptor: true,
+			},
 		],
 
 		/*
@@ -195,14 +195,14 @@ module.exports = {
 				// MemberExpression: null,
 				FunctionDeclaration: {
 					parameters: 1,
-					body: 1
+					body: 1,
 				},
 				FunctionExpression: {
 					parameters: 1,
-					body: 1
+					body: 1,
 				},
 				CallExpression: {
-					arguments: 1
+					arguments: 1,
 				},
 				ArrayExpression: 1,
 				ObjectExpression: 1,
@@ -222,10 +222,10 @@ module.exports = {
 					'JSXClosingElement',
 					'JSXText',
 					'JSXEmptyExpression',
-					'JSXSpreadChild'
+					'JSXSpreadChild',
 				],
-				ignoreComments: false
-			}
+				ignoreComments: false,
+			},
 		],
 
 		/*
@@ -239,7 +239,7 @@ module.exports = {
 		 * https://eslint.org/docs/rules/key-spacing
 		 */
 		'key-spacing': ['error', {
-			beforeColon: false, afterColon: true
+			beforeColon: false, afterColon: true,
 		}],
 
 		/*
@@ -254,9 +254,9 @@ module.exports = {
 				overrides: {
 					return: { after: true },
 					throw: { after: true },
-					case: { after: true }
-				}
-			}
+					case: { after: true },
+				},
+			},
 		],
 
 		/*
@@ -268,8 +268,8 @@ module.exports = {
 			{
 				position: 'above',
 				ignorePattern: '',
-				applyDefaultPatterns: true
-			}
+				applyDefaultPatterns: true,
+			},
 		],
 
 		/*
@@ -316,8 +316,8 @@ module.exports = {
 				ignoreComments: true,
 				ignoreRegExpLiterals: true,
 				ignoreStrings: true,
-				ignoreTemplateLiterals: true
-			}
+				ignoreTemplateLiterals: true,
+			},
 		],
 
 		/*
@@ -329,8 +329,8 @@ module.exports = {
 			{
 				max: 300,
 				skipBlankLines: true,
-				skipComments: true
-			}
+				skipComments: true,
+			},
 		],
 
 		/*
@@ -343,8 +343,8 @@ module.exports = {
 				max: 100,
 				skipBlankLines: true,
 				skipComments: true,
-				IIFEs: true
-			}
+				IIFEs: true,
+			},
 		],
 
 		/*
@@ -393,8 +393,8 @@ module.exports = {
 				newIsCap: true,
 				newIsCapExceptions: [],
 				capIsNew: false,
-				capIsNewExceptions: ['Immutable.Map', 'Immutable.Set', 'Immutable.List']
-			}
+				capIsNewExceptions: ['Immutable.Map', 'Immutable.Set', 'Immutable.List'],
+			},
 		],
 
 		/*
@@ -474,10 +474,10 @@ module.exports = {
 					['/', '*'],
 					['&', '|', '<<', '>>', '>>>'],
 					['==', '!=', '===', '!=='],
-					['&&', '||']
+					['&&', '||'],
 				],
-				allowSamePrecedence: false
-			}
+				allowSamePrecedence: false,
+			},
 		],
 
 		/*
@@ -497,7 +497,7 @@ module.exports = {
 		 * https://eslint.org/docs/rules/no-multiple-empty-lines
 		 */
 		'no-multiple-empty-lines': ['error', {
-			max: 1, maxBOF: 1, maxEOF: 0
+			max: 1, maxBOF: 1, maxEOF: 0,
 		}],
 
 		/*
@@ -533,23 +533,23 @@ module.exports = {
 			{
 				selector: 'ForInStatement',
 				message:
-					'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.'
+					'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.',
 			},
 			{
 				selector: 'ForOfStatement',
 				message:
-					'iterators/generators require regenerator-runtime, which is too heavyweight for this guide to allow them. Separately, loops should be avoided in favor of array iterations.'
+					'iterators/generators require regenerator-runtime, which is too heavyweight for this guide to allow them. Separately, loops should be avoided in favor of array iterations.',
 			},
 			{
 				selector: 'LabeledStatement',
 				message:
-					'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.'
+					'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
 			},
 			{
 				selector: 'WithStatement',
 				message:
-					'`with` is disallowed in strict mode because it makes code impossible to predict and optimize.'
-			}
+					'`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
+			},
 		],
 
 		/*
@@ -579,8 +579,8 @@ module.exports = {
 			'error',
 			{
 				skipBlankLines: false,
-				ignoreComments: false
-			}
+				ignoreComments: false,
+			},
 		],
 
 		/*
@@ -594,8 +594,8 @@ module.exports = {
 				allow: ['_id'],
 				allowAfterThis: true,
 				allowAfterSuper: false,
-				enforceInMethodNames: true
-			}
+				enforceInMethodNames: true,
+			},
 		],
 
 		/*
@@ -631,18 +631,18 @@ module.exports = {
 			'error',
 			{
 				ObjectExpression: {
-					minProperties: 4, multiline: true, consistent: true
+					minProperties: 4, multiline: true, consistent: true,
 				},
 				ObjectPattern: {
-					minProperties: 4, multiline: true, consistent: true
+					minProperties: 4, multiline: true, consistent: true,
 				},
 				ImportDeclaration: {
-					minProperties: 4, multiline: true, consistent: true
+					minProperties: 4, multiline: true, consistent: true,
 				},
 				ExportDeclaration: {
-					minProperties: 4, multiline: true, consistent: true
-				}
-			}
+					minProperties: 4, multiline: true, consistent: true,
+				},
+			},
 		],
 
 		/*
@@ -652,8 +652,8 @@ module.exports = {
 		'object-property-newline': [
 			'error',
 			{
-				allowAllPropertiesOnSameLine: true
-			}
+				allowAllPropertiesOnSameLine: true,
+			},
 		],
 
 		/*
@@ -689,11 +689,11 @@ module.exports = {
 			{
 				blocks: 'never',
 				classes: 'never',
-				switches: 'never'
+				switches: 'never',
 			},
 			{
-				allowSingleLineBlocks: true
-			}
+				allowSingleLineBlocks: true,
+			},
 		],
 
 		/*
@@ -707,58 +707,58 @@ module.exports = {
 				blankLine: 'always',
 				prev: [
 					'block',
-					'block-like'
+					'block-like',
 				],
-				next: '*'
+				next: '*',
 			},
 			// Padding lines after CommonJS export and class statements
 			{
 				blankLine: 'always',
 				prev: [
 					'cjs-export',
-					'class'
+					'class',
 				],
-				next: '*'
+				next: '*',
 			},
 			// Padding lines after export and import blocks
 			{
 				blankLine: 'always',
 				prev: ['export', 'import'],
-				next: '*'
+				next: '*',
 			},
 			{
 				blankLine: 'any',
 				prev: ['export', 'import'],
-				next: ['export', 'import']
+				next: ['export', 'import'],
 			},
 			// Padding lines after variable declaration blocks
 			{
 				blankLine: 'always',
 				prev: ['const', 'let', 'var'],
-				next: '*'
+				next: '*',
 			},
 			{
 				blankLine: 'any',
 				prev: ['const', 'let', 'var'],
-				next: ['const', 'let', 'var']
+				next: ['const', 'let', 'var'],
 			},
 			// Padding lines before throw and return statement
 			{
 				blankLine: 'always',
 				prev: '*',
-				next: ['throw', 'return']
+				next: ['throw', 'return'],
 			},
 			// Padding lines after directive blocks
 			{
 				blankLine: 'always',
 				prev: 'directive',
-				next: '*'
+				next: '*',
 			},
 			{
 				blankLine: 'any',
 				prev: 'directive',
-				next: 'directive'
-			}
+				next: 'directive',
+			},
 		],
 
 		/*
@@ -775,8 +775,8 @@ module.exports = {
 			'error',
 			'as-needed',
 			{
-				keywords: false, unnecessary: true, numbers: false
-			}
+				keywords: false, unnecessary: true, numbers: false,
+			},
 		],
 
 		/*
@@ -802,7 +802,7 @@ module.exports = {
 		 * https://eslint.org/docs/rules/semi-spacing
 		 */
 		'semi-spacing': ['error', {
-			before: false, after: true
+			before: false, after: true,
 		}],
 
 		/*
@@ -816,7 +816,7 @@ module.exports = {
 		 * https://eslint.org/docs/rules/sort-keys
 		 */
 		'sort-keys': ['off', 'asc', {
-			caseSensitive: false, natural: true
+			caseSensitive: false, natural: true,
 		}],
 
 		/*
@@ -840,8 +840,8 @@ module.exports = {
 			{
 				anonymous: 'always',
 				named: 'never',
-				asyncArrow: 'always'
-			}
+				asyncArrow: 'always',
+			},
 		],
 
 		/*
@@ -865,8 +865,8 @@ module.exports = {
 			{
 				words: true,
 				nonwords: false,
-				overrides: {}
-			}
+				overrides: {},
+			},
 		],
 
 		/*
@@ -880,15 +880,15 @@ module.exports = {
 				line: {
 					exceptions: ['-', '+'],
 					// space here to support sprockets directives
-					markers: ['=', '!']
+					markers: ['=', '!'],
 				},
 				block: {
 					exceptions: ['-', '+'],
 					// space here to support sprockets directives and flow comment types
 					markers: ['=', '!', ':', '::'],
-					balanced: true
-				}
-			}
+					balanced: true,
+				},
+			},
 		],
 
 		/*
@@ -896,7 +896,7 @@ module.exports = {
 		 * https://eslint.org/docs/rules/switch-colon-spacing
 		 */
 		'switch-colon-spacing': ['error', {
-			after: true, before: false
+			after: true, before: false,
 		}],
 
 		/*
@@ -915,6 +915,6 @@ module.exports = {
 		 * Require regex literals to be wrapped in parentheses
 		 * https://eslint.org/docs/rules/wrap-regex
 		 */
-		'wrap-regex': 'error'
-	}
+		'wrap-regex': 'error',
+	},
 };

@@ -1,9 +1,9 @@
 module.exports = {
 	env: {
-		browser: true
+		browser: true,
 	},
 
 	extends: require.resolve('./index'),
 
-	rules: {}
+	rules: {},
 };

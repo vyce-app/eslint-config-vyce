@@ -10,6 +10,6 @@ module.exports = {
 		'./rules/sonar',
 		'./rules/underscore',
 		'./rules/fp',
-		'./rules/proper-ternary'
-	].map(require.resolve)
+		'./rules/proper-ternary',
+	].map(require.resolve),
 };

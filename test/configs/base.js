@@ -2,13 +2,13 @@ module.exports = {
 	parser: '@typescript-eslint/parser',
 	env: {
 		node: true,
-		browser: true
+		browser: true,
 	},
 	parserOptions: {
-		ecmaVersion: 2023
+		ecmaVersion: 2023,
 	},
 	extends: ['eslint:recommended'],
 	rules: {
-		'no-unused-vars': 'off'
-	}
+		'no-unused-vars': 'off',
+	},
 };

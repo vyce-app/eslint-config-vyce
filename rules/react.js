@@ -12,33 +12,33 @@ module.exports = {
 					'error',
 					{
 						selector: 'default',
-						format: ['camelCase']
+						format: ['camelCase'],
 					},
 					{
 						selector: 'variable',
-						format: ['camelCase', 'UPPER_CASE']
+						format: ['camelCase', 'UPPER_CASE'],
 					},
 					{
 						selector: 'parameter',
 						format: ['camelCase'],
-						leadingUnderscore: 'allow'
+						leadingUnderscore: 'allow',
 					},
 					{
 						selector: 'memberLike',
 						modifiers: ['private'],
 						format: ['camelCase'],
-						leadingUnderscore: 'require'
+						leadingUnderscore: 'require',
 					},
 					{
 						selector: 'typeLike',
-						format: ['PascalCase']
+						format: ['PascalCase'],
 					},
 					{
 						selector: 'function',
-						format: ['PascalCase', 'camelCase']
+						format: ['PascalCase', 'camelCase'],
 					},
 				],
-			}
+			},
 		},
 	],
 
@@ -55,7 +55,7 @@ module.exports = {
 			// It will default to "latest" and warn if missing, and to "detect" in the future
 			version: 'detect',
 			// Flow version
-			flowVersion: '0.53'
+			flowVersion: '0.53',
 		},
 		propWrapperFunctions: [
 			// The names of any function used to wrap propTypes, e.g. `forbidExtraProps`. If this isn't set, any propTypes wrapped in a function will be skipped.
@@ -63,7 +63,7 @@ module.exports = {
 			{ property: 'freeze', object: 'Object' },
 			{ property: 'myFavoriteWrapper' },
 			// for rules that check exact prop wrappers
-			{ property: 'forbidExtraProps', exact: true }
+			{ property: 'forbidExtraProps', exact: true },
 		],
 		componentWrapperFunctions: [
 			// The name of any function used to wrap components, e.g. Mobx `observer` function. If this isn't set, components wrapped by these functions will be skipped.
@@ -73,17 +73,17 @@ module.exports = {
 			{ property: 'styled' },
 			{ property: 'observer', object: 'Mobx' },
 			// sets `object` to whatever value `settings.react.pragma` is set to
-			{ property: 'observer', object: '<pragma>' }
+			{ property: 'observer', object: '<pragma>' },
 		],
 		formComponents: [
 			// Components used as alternatives to <form> for forms, eg. <Form endpoint={ url } />
 			'CustomForm',
-			{ name: 'Form', formAttribute: 'endpoint' }
+			{ name: 'Form', formAttribute: 'endpoint' },
 		],
 		linkComponents: [
 			// Components used as alternatives to <a> for linking, eg. <Link to={ url } />
 			'Hyperlink',
-			{ name: 'Link', linkAttribute: 'to' }
-		]
-	}
-}
+			{ name: 'Link', linkAttribute: 'to' },
+		],
+	},
+};

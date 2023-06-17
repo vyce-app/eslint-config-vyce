@@ -6,5 +6,5 @@ module.exports = {
 
 	rules: {
 		'you-dont-need-lodash-underscore/get': 'off',
-	}
+	},
 };

@@ -1,8 +1,8 @@
 module.exports = {
 	extends: [
 		require.resolve('./node'),
-		require.resolve('./rules/typescript')
+		require.resolve('./rules/typescript'),
 	],
 
-	rules: {}
+	rules: {},
 };

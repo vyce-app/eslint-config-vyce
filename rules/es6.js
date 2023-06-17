@@ -1,6 +1,6 @@
 module.exports = {
 	env: {
-		es6: true
+		es6: true,
 	},
 
 	parserOptions: {
@@ -8,8 +8,8 @@ module.exports = {
 		sourceType: 'module',
 		ecmaFeatures: {
 			generators: false,
-			objectLiteralDuplicateProperties: false
-		}
+			objectLiteralDuplicateProperties: false,
+		},
 	},
 
 	rules: {
@@ -18,7 +18,7 @@ module.exports = {
 		 * https://eslint.org/docs/rules/arrow-body-style
 		 */
 		'arrow-body-style': ['error', 'as-needed', {
-			requireReturnForObjectLiteral: false
+			requireReturnForObjectLiteral: false,
 		}],
 
 		/*
@@ -32,7 +32,7 @@ module.exports = {
 		 * https://eslint.org/docs/rules/arrow-spacing
 		 */
 		'arrow-spacing': ['error', {
-			before: true, after: true
+			before: true, after: true,
 		}],
 
 		// verify super() callings in constructors
@@ -43,7 +43,7 @@ module.exports = {
 		 * https://eslint.org/docs/rules/generator-star-spacing
 		 */
 		'generator-star-spacing': ['error', {
-			before: false, after: true
+			before: false, after: true,
 		}],
 
 		/*
@@ -57,7 +57,7 @@ module.exports = {
 		 * https://eslint.org/docs/rules/no-confusing-arrow
 		 */
 		'no-confusing-arrow': ['error', {
-			allowParens: true
+			allowParens: true,
 		}],
 
 		// disallow modifying variables that are declared using const
@@ -88,7 +88,7 @@ module.exports = {
 		 */
 		'no-restricted-imports': ['off', {
 			paths: [],
-			patterns: []
+			patterns: [],
 		}],
 
 		/*
@@ -116,7 +116,7 @@ module.exports = {
 		'no-useless-rename': ['error', {
 			ignoreDestructuring: false,
 			ignoreImport: false,
-			ignoreExport: false
+			ignoreExport: false,
 		}],
 
 		// require let or const instead of var
@@ -128,19 +128,19 @@ module.exports = {
 		 */
 		'object-shorthand': ['error', 'always', {
 			ignoreConstructors: false,
-			avoidQuotes: true
+			avoidQuotes: true,
 		}],
 
 		// suggest using arrow functions as callbacks
 		'prefer-arrow-callback': ['error', {
 			allowNamedFunctions: false,
-			allowUnboundThis: true
+			allowUnboundThis: true,
 		}],
 
 		// suggest using of const declaration for variables that are never modified after declared
 		'prefer-const': ['error', {
 			destructuring: 'any',
-			ignoreReadBeforeAssign: true
+			ignoreReadBeforeAssign: true,
 		}],
 
 		/*
@@ -150,14 +150,14 @@ module.exports = {
 		'prefer-destructuring': ['error', {
 			VariableDeclarator: {
 				array: false,
-				object: true
+				object: true,
 			},
 			AssignmentExpression: {
 				array: true,
-				object: false
-			}
+				object: false,
+			},
 		}, {
-			enforceForRenamedProperties: false
+			enforceForRenamedProperties: false,
 		}],
 
 		/*
@@ -230,6 +230,6 @@ module.exports = {
 		 * enforce spacing around the * in yield* expressions
 		 * https://eslint.org/docs/rules/yield-star-spacing
 		 */
-		'yield-star-spacing': ['error', 'after']
-	}
+		'yield-star-spacing': ['error', 'after'],
+	},
 };
