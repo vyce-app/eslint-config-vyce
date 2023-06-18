@@ -180,14 +180,13 @@ module.exports = {
 					},
 					{
 						selector: 'variable',
-						format: ['camelCase', 'UPPER_CASE'],
+						format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
 					},
 					{
 						selector: 'parameter',
 						format: ['camelCase'],
 						leadingUnderscore: 'allow',
 					},
-
 					{
 						selector: 'memberLike',
 						modifiers: ['private'],
@@ -195,8 +194,35 @@ module.exports = {
 						leadingUnderscore: 'require',
 					},
 					{
+						selector: [
+							'classProperty',
+							'objectLiteralProperty',
+							'typeProperty',
+						],
+						format: ['camelCase', 'PascalCase', 'snake_case'],
+						leadingUnderscore: 'allow',
+					},
+					{
 						selector: 'typeLike',
 						format: ['PascalCase'],
+					},
+					{
+						selector: 'function',
+						format: ['PascalCase', 'camelCase'],
+					},
+					{
+						selector: [
+							'classProperty',
+							'objectLiteralProperty',
+							'typeProperty',
+							'classMethod',
+							'objectLiteralMethod',
+							'typeMethod',
+							'accessor',
+							'enumMember',
+						],
+						format: null,
+						modifiers: ['requiresQuotes'],
 					},
 				],
 				'@typescript-eslint/no-confusing-void-expression': 'error',
