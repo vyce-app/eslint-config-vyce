@@ -21,6 +21,8 @@ Tightening of any checks means breaking change and should be published with majo
 - **Patch:** Fixing of minor oversights
 
 ## How to publish new version
-- Run `npm version [patch|minor|major] -m "Version commit message"`
-- Add the version bump commit to the pull request
-- Merge to master and GitHub Action will build, publish and then tag the commit if successful
+- Commit changes to new branch and push
+- Run `npm run version [patch|minor|major] -m "Version commit message"`
+- Push the version bump commit
+- Create pull request to master
+- Merge PR to master and GitHub Action will build, publish and then tag the commit if successful
