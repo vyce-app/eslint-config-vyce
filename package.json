@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-vyce",
-	"version": "3.2.0",
+	"version": "3.3.0",
 	"description": "Vyce Typescript style guide",
 	"main": "index.js",
 	"files": [
