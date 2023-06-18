@@ -238,7 +238,7 @@ module.exports = {
 				'@typescript-eslint/no-use-before-define': 'error',
 				'@typescript-eslint/no-useless-empty-export': 'error',
 				'object-curly-spacing': 'off',
-				'@typescript-eslint/object-curly-spacing': 'error',
+				'@typescript-eslint/object-curly-spacing': ['error', 'always'],
 				'padding-line-between-statements': 'off',
 				'@typescript-eslint/padding-line-between-statements': 'error',
 				'@typescript-eslint/parameter-properties': 'error',
