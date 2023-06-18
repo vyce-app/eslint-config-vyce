@@ -47,8 +47,6 @@ describe('ts-node', () => {
 			result.stdout.substring(result.stdout.indexOf('[')),
 		);
 
-		expect(output.length).toBe(1);
-		expect(output[0].messages.length).toBe(3);
 		expect(output[0].messages[0].ruleId).toBe(
 			'@typescript-eslint/no-unused-vars',
 		);
@@ -58,6 +56,8 @@ describe('ts-node', () => {
 		expect(output[0].messages[2].ruleId).toBe(
 			'@typescript-eslint/comma-dangle',
 		);
+		expect(output[0].messages.length).toBe(3);
+		expect(output.length).toBe(1);
 	});
 
 	it('returns configuration', () => {
