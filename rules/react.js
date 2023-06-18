@@ -1,7 +1,23 @@
 module.exports = {
-	extends: ['plugin:react/recommended', 'plugin:react-hooks/recommended'],
+	plugins: [
+		'react',
+		'react-hooks',
+		'@tanstack/query',
+		'react-hook-form',
+		'zod',
+	],
 
-	plugins: ['react', 'react-hooks'],
+	extends: [
+		'plugin:react/recommended',
+		'plugin:react-hooks/recommended',
+		'plugin:@tanstack/eslint-plugin-query/recommended',
+		'plugin:react-hook-form/recommended',
+	],
+
+	rules: {
+		'zod/prefer-enum': 'error',
+		'zod/require-strict': 'error',
+	},
 
 	overrides: [
 		{
@@ -10,59 +26,6 @@ module.exports = {
 			rules: {
 				'react/react-in-jsx-scope': 'off',
 				'@typescript-eslint/no-use-before-define': 'off',
-				'@typescript-eslint/naming-convention': [
-					'error',
-					{
-						selector: 'default',
-						format: ['camelCase'],
-					},
-					{
-						selector: 'variable',
-						format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
-					},
-					{
-						selector: 'parameter',
-						format: ['camelCase'],
-						leadingUnderscore: 'allow',
-					},
-					{
-						selector: 'memberLike',
-						modifiers: ['private'],
-						format: ['camelCase'],
-						leadingUnderscore: 'require',
-					},
-					{
-						selector: [
-							'classProperty',
-							'objectLiteralProperty',
-							'typeProperty',
-						],
-						format: ['camelCase', 'PascalCase', 'snake_case'],
-						leadingUnderscore: 'allow',
-					},
-					{
-						selector: 'typeLike',
-						format: ['PascalCase'],
-					},
-					{
-						selector: 'function',
-						format: ['PascalCase', 'camelCase'],
-					},
-					{
-						selector: [
-							'classProperty',
-							'objectLiteralProperty',
-							'typeProperty',
-							'classMethod',
-							'objectLiteralMethod',
-							'typeMethod',
-							'accessor',
-							'enumMember',
-						],
-						format: null,
-						modifiers: ['requiresQuotes'],
-					},
-				],
 			},
 		},
 	],
