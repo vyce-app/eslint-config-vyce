@@ -12,7 +12,7 @@ npm install --save-dev eslint-config-vyce
 ## How to develop
 - Clone the repository
 - Run `npm install` to install dependencies
-- Make changes and commit
+- Make changes, create new branch and commit & push
 
 ## Versioning
 Tightening of any checks means breaking change and should be published with major version release. Relaxation of rules and fixing issues are published under minor and patch versions.
@@ -21,8 +21,7 @@ Tightening of any checks means breaking change and should be published with majo
 - **Patch:** Fixing of minor oversights
 
 ## How to publish new version
-- Commit changes to new branch and push
-- Run `npm run version [patch|minor|major] -m "Version commit message"`
-- Push the version bump commit
+- Run `npm run version [patch|minor|major]` to bump the version
+- Commit and push changes
 - Create pull request to master
 - Merge PR to master and GitHub Action will build, publish and then tag the commit if successful
