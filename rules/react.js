@@ -4,6 +4,7 @@ module.exports = {
 		'react-hooks',
 		'@tanstack/query',
 		'react-hook-form',
+		'testing-library',
 		'zod',
 	],
 
@@ -12,6 +13,7 @@ module.exports = {
 		'plugin:react-hooks/recommended',
 		'plugin:@tanstack/eslint-plugin-query/recommended',
 		'plugin:react-hook-form/recommended',
+		'plugin:testing-library/react',
 	],
 
 	rules: {
