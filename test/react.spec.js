@@ -47,11 +47,11 @@ describe('react', () => {
 			result.stdout.substring(result.stdout.indexOf('[')),
 		);
 
-		expect(output.length).toBe(1);
-		expect(output[0].messages.length).toBe(1);
 		expect(output[0].messages[0].ruleId).toBe(
 			'react/no-find-dom-node',
 		);
+		expect(output[0].messages.length).toBe(1);
+		expect(output.length).toBe(1);
 	});
 
 	it('returns configuration', () => {
