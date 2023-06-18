@@ -61,7 +61,7 @@ jobs:
           master_version=$(node -p "require('./package.json').version")
 
           # Check if the current version is greater than the master version
-          if [[ $(printf "%s\n%s" "$master_version" "$current_version" | sort -V | head -n 1) != "$master_version" ]]; then
+          if [[ $(printf "%s\n%s" "$master_version" "$current_version" | sort -V | tail -n 1) != "$master_version" ]]; then
             echo "Version has increased from $master_version in master to $current_version."
           else
             echo "Version has not increased from master!"
