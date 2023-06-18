@@ -1,4 +1,5 @@
 module.exports = {
+	plugins: ['max-params-no-constructor'],
 	rules: {
 		/*
 		 * Enforce line breaks after opening and before closing array brackets
@@ -356,8 +357,10 @@ module.exports = {
 		/*
 		 * Limits the number of parameters that can be used in the function declaration
 		 * https://eslint.org/docs/rules/max-params
+		 * Replaced with a version which doesn't take constructor into account
 		 */
-		'max-params': ['error', 4],
+		'max-params': 'off',
+		'max-params-no-constructor/max-params-no-constructor': ['error', 4],
 
 		/*
 		 * Specify the maximum number of statement allowed in a function
