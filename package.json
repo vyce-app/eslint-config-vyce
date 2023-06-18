@@ -22,8 +22,8 @@
 	},
 	"homepage": "https://github.com/vyce-app/eslint-config-vyce#readme",
 	"scripts": {
-		"test": "vitest watch",
-		"test:no-watch": "vitest run",
+		"test": "vitest run",
+		"test:watch": "vitest watch",
 		"test:coverage": "vitest run --coverage",
 		"test:spec": "eslint --format json",
 		"lint": "eslint --report-unused-disable-directives .",
