@@ -8,6 +8,8 @@ module.exports = {
 			files: ['*.tsx', '*.jsx'],
 
 			rules: {
+				'react/react-in-jsx-scope': 'off',
+				'@typescript-eslint/no-use-before-define': 'off',
 				'@typescript-eslint/naming-convention': [
 					'error',
 					{
@@ -16,7 +18,7 @@ module.exports = {
 					},
 					{
 						selector: 'variable',
-						format: ['camelCase', 'UPPER_CASE'],
+						format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
 					},
 					{
 						selector: 'parameter',
@@ -30,12 +32,35 @@ module.exports = {
 						leadingUnderscore: 'require',
 					},
 					{
+						selector: [
+							'classProperty',
+							'objectLiteralProperty',
+							'typeProperty',
+						],
+						format: ['camelCase', 'PascalCase', 'snake_case'],
+						leadingUnderscore: 'allow',
+					},
+					{
 						selector: 'typeLike',
 						format: ['PascalCase'],
 					},
 					{
 						selector: 'function',
 						format: ['PascalCase', 'camelCase'],
+					},
+					{
+						selector: [
+							'classProperty',
+							'objectLiteralProperty',
+							'typeProperty',
+							'classMethod',
+							'objectLiteralMethod',
+							'typeMethod',
+							'accessor',
+							'enumMember',
+						],
+						format: null,
+						modifiers: ['requiresQuotes'],
 					},
 				],
 			},
