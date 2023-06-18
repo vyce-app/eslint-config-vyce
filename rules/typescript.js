@@ -198,7 +198,7 @@ module.exports = {
 						selector: 'memberLike',
 						modifiers: ['private'],
 						format: ['camelCase'],
-						leadingUnderscore: 'require',
+						leadingUnderscore: 'allow',
 					},
 					{
 						selector: [
@@ -278,7 +278,7 @@ module.exports = {
 				'@typescript-eslint/object-curly-spacing': ['error', 'always'],
 				'padding-line-between-statements': 'off',
 				'@typescript-eslint/padding-line-between-statements': 'error',
-				'@typescript-eslint/parameter-properties': 'error',
+				'@typescript-eslint/parameter-properties': 'off',
 				'@typescript-eslint/prefer-enum-initializers': 'error',
 				'@typescript-eslint/prefer-readonly': 'error',
 				'@typescript-eslint/prefer-readonly-parameter-types': 'off',

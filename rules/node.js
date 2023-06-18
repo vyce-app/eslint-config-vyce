@@ -107,5 +107,19 @@ module.exports = {
 		 * https://eslint.org/docs/rules/no-sync
 		 */
 		'no-sync': 'off',
+
+		/*
+		 * Disallow import declarations which import non-existence modules (n/no-missing-import)
+		 * https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/no-missing-import.md
+		 * Turned off because eslint-plugin-import handles import errors
+		 */
+		'n/no-missing-import': 'off',
+
+		/*
+		 * Disallow import declarations which import extraneous modules (n/no-extraneous-import)
+		 * https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/no-extraneous-import.md
+		 * Turned off because eslint-plugin-import handles import errors
+		 */
+		'n/no-extraneous-import': 'off',
 	},
 };
