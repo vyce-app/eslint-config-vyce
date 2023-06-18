@@ -160,7 +160,7 @@ module.exports = {
 					},
 				],
 				'init-declarations': 'off',
-				'@typescript-eslint/init-declarations': 'error',
+				'@typescript-eslint/init-declarations': 'off',
 				'key-spacing': 'off',
 				'@typescript-eslint/key-spacing': 'error',
 				'keyword-spacing': 'off',
@@ -199,7 +199,7 @@ module.exports = {
 							'objectLiteralProperty',
 							'typeProperty',
 						],
-						format: ['camelCase', 'PascalCase', 'snake_case'],
+						format: ['camelCase', 'PascalCase', 'snake_case', 'UPPER_CASE'],
 						leadingUnderscore: 'allow',
 					},
 					{
@@ -209,6 +209,10 @@ module.exports = {
 					{
 						selector: 'function',
 						format: ['PascalCase', 'camelCase'],
+					},
+					{
+						selector: 'enumMember',
+						format: ['PascalCase', 'UPPER_CASE'],
 					},
 					{
 						selector: [
