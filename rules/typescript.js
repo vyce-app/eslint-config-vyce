@@ -127,7 +127,19 @@ module.exports = {
 				'default-param-last': 'off',
 				'@typescript-eslint/default-param-last': 'error',
 				'@typescript-eslint/explicit-function-return-type': 'off',
-				'@typescript-eslint/explicit-member-accessibility': 'error',
+				'@typescript-eslint/explicit-member-accessibility': [
+					'error',
+					{
+						accessibility: 'explicit',
+						overrides: {
+							accessors: 'off',
+							constructors: 'no-public',
+							methods: 'explicit',
+							properties: 'explicit',
+							parameterProperties: 'explicit',
+						},
+					},
+				],
 				'@typescript-eslint/explicit-module-boundary-types': 'off',
 				'func-call-spacing': 'off',
 				'@typescript-eslint/func-call-spacing': 'error',
