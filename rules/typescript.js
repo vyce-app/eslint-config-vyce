@@ -264,7 +264,7 @@ module.exports = {
 				'@typescript-eslint/space-before-function-paren': 'off',
 				'space-infix-ops': 'off',
 				'@typescript-eslint/space-infix-ops': 'error',
-				'@typescript-eslint/strict-boolean-expressions': 'error',
+				'@typescript-eslint/strict-boolean-expressions': 'off',
 				'@typescript-eslint/switch-exhaustiveness-check': 'error',
 				'@typescript-eslint/type-annotation-spacing': 'error',
 				'@typescript-eslint/typedef': 'error',
