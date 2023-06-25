@@ -180,6 +180,13 @@ module.exports = {
 		'import/imports-first': 'off',
 
 		/*
+		 * named type-only specifiers only ever written as part of a top-level, type-only import;
+		 * and never with an inline marker.
+		 * https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/consistent-type-specifier-style.md
+		 */
+		'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
+
+		/*
 		 * disallow duplicate imports
 		 * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
 		 */
